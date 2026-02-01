@@ -1,0 +1,18 @@
+list = [5, 3, 7, 2, 5, 8, 3, 1, 9, 5]
+
+print(list[-2]) #вывод предпоследнего элемента
+print(list[0], list[3], list[5]) #несколько элементов по индексу
+
+list[4] = 666
+print(list[2:7]) #Элементы в диапазоне с 2 до 6 
+
+list.append(88005553535)#новый элемент списка лучше позвонить чем у кого-то занимать
+
+seredinochka = len(list) // 2
+list.insert(seredinochka, "СрединаСпискаЙоу")
+print(list.count(5)) #кодичество пятерок
+
+copy_list = list.copy()
+copy_list[0] = "8757"
+print(list)
+print(copy_list)
