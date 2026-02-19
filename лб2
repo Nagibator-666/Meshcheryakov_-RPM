@@ -1,0 +1,69 @@
+с#
+
+using System;
+
+             
+class Animal
+{
+    string species;
+    int age;
+
+    public Animal(string species)
+    {
+        this.species = species;
+        Console.WriteLine("Animal(string species)");
+    }
+
+    public Animal(string species, int age) : this(species)
+    {
+        this.age = age;
+        Console.WriteLine("Animal(string species, int age)");
+    }
+}
+
+class Dog:Animal
+{
+    string breed;
+
+    public Dog(string species, int age, string breed) : base(species, age)
+    {
+        this.breed = breed;
+        Console.WriteLine("Dog(string species, int age, string breed)");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog myDog = new Dog("Canine", 3, "Labrador");
+    }
+}
+
+
+python
+
+class ConsoleMarket:
+    def init(self, make, model, year, price):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.price = price
+        
+        
+    def info(self):
+        print(f"Марка:" {self.make}
+            f"\n Модель: {self.model}"
+            f"\n Год выпуска {self.year}"
+            f"\n Цена {self.price} руб")
+            
+            
+class Console(ConsoleMarket):
+    def init(self, make, model, year, price, number):
+        super().init(make, model, year, price)
+        self.number = number
+        
+        
+console = Console("Sony", "ps3", 2012, 8000)
+
+console.info()
