@@ -19,7 +19,13 @@ class Animal
         this.age = age;
         Console.WriteLine("Animal(string species, int age)");
     }
+    public void ShowInfo()
+    {
+        Console.WriteLine($"Вид: {species}, Возраст: {age}");
+    }
 }
+
+
 
 class Dog:Animal
 {
@@ -30,15 +36,30 @@ class Dog:Animal
         this.breed = breed;
         Console.WriteLine("Dog(string species, int age, string breed)");
     }
+
+    public void Bark()
+    {
+        Console.WriteLine($"{breed} говорит: ГАВ-ГАВ!");
+    }
 }
+
+
+
 
 class Program
 {
     static void Main()
     {
         Dog myDog = new Dog("Canine", 3, "Labrador");
+
+        myDog.ShowInfo();
+        myDog.Bark();
     }
+    
 }
+
+
+
 
 
 python
